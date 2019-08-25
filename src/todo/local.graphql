@@ -1,0 +1,20 @@
+extend type RootQuery {
+  todoApp: TodoApp
+}
+
+type TodoApp {
+  todos: [Todo!]
+  filter: TodoAppFilter
+}
+
+type Todo {
+  id: ID!
+  text: String
+  isDone: Boolean
+}
+
+enum TodoAppFilter {
+  ALL
+  ACTIVE
+  COMPLETED
+}
